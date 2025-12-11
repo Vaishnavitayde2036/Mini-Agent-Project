@@ -1,24 +1,24 @@
 
-# Mini Agent Workflow Engine
+Mini Agent Workflow Engine
 
 A lightweight, async backend for AI agent workflows built with **FastAPI**. It allows you to define nodes, connect them with edges, and support conditional looping (e.g., a "Code Review" agent that loops until quality improves).
 
-## 🚀 Features
+Features
 - **Graph Engine:** Dynamic execution of nodes and edges.
 - **State Management:** A shared dictionary (`state`) that flows between steps.
 - **Conditional Branching:** Support for loops and logic-based routing.
 - **Async Execution:** Built on Python's `asyncio` for non-blocking operations.
 - **REST API:** Clean endpoints to create and run workflows.
 
-## 🛠️ Setup & Installation
+Setup & Installation
 
-1. **Clone the repository**
+1. Clone the repository
    ```bash
    git clone [https://github.com/YOUR_USERNAME/mini-agent-engine.git](https://github.com/YOUR_USERNAME/mini-agent-engine.git)
    cd mini-agent-engine
 ````
 
-2.  **Create a Virtual Environment**
+2.  Create a Virtual Environment
 
     ```bash
     python -m venv venv
@@ -28,13 +28,13 @@ A lightweight, async backend for AI agent workflows built with **FastAPI**. It a
     source venv/bin/activate
     ```
 
-3.  **Install Dependencies**
+3.  Install Dependencies
 
     ```bash
     pip install fastapi uvicorn pydantic
     ```
 
-4.  **Run the Server**
+4.  Run the Server
 
     ```bash
     uvicorn app.main:app --reload
@@ -42,15 +42,15 @@ A lightweight, async backend for AI agent workflows built with **FastAPI**. It a
 
     The API will be available at: `http://127.0.0.1:8000`
 
-## 📖 How to Use
+📖 How to Use
 
 The easiest way to test is via the interactive API docs at `http://127.0.0.1:8000/docs`.
 
-### 1\. Create a Workflow Graph
+1\. Create a Workflow Graph
 
-Send a **POST** request to `/graph/create` with your node definitions.
+Send a POST request to `/graph/create` with your node definitions.
 
-**Example Payload:**
+Example Payload:
 
 ```json
 {
@@ -68,7 +68,7 @@ Send a **POST** request to `/graph/create` with your node definitions.
 }
 ```
 
-*Copy the `graph_id` returned in the response.*
+Copy the `graph_id` returned in the response.
 
 ### 2\. Run the Agent
 
@@ -85,12 +85,11 @@ Send a **POST** request to `/graph/run`.
   }
 }
 ```
-
-### 3\. View Results
+3\. View Results
 
 The response will contain the execution logs, showing the agent looping through the "improve" step until the quality score meets the threshold.
 
-## 📂 Project Structure
+📂 Project Structure
 
 ```
 /app
