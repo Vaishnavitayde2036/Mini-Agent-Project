@@ -14,7 +14,7 @@ Setup & Installation
 
 1. Clone the repository
    
-   git clone [https://github.com/YOUR_USERNAME/mini-agent-engine.git](https://github.com/YOUR_USERNAME/mini-agent-engine.git)
+   git clone (https://github.com/Vaishnavitayde2036/mini-agent-engine.git)
    cd mini-agent-engine
 
 
